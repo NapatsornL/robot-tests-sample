@@ -9,5 +9,5 @@ ${BROWSER}    headlesschrome
 Verify Website Title and Element
     Open Browser    ${URL}    ${BROWSER}
     Title Should Be    Google
-    Page Should Contain    I'm Feeling Lucky
+    Page Should Contain Element    name:q
     Close Browser
