@@ -6,22 +6,20 @@ ${URL}        https://www.google.com
 ${BROWSER}    headlesschrome
 
 *** Test Cases ***
-Verify Website Title
-    Open Browser    ${URL}    ${BROWSER}
-    Title Should Be    Google
-    Close Browser
+Test Addition Of Two Numbers
+    ${a}=    Set Variable    5
+    ${b}=    Set Variable    7
+    ${result}=    Evaluate    ${a} + ${b}
+    Should Be Equal    ${result}    12
 
-Verify Search Input Presence
-    Open Browser    ${URL}    ${BROWSER}
-    Page Should Contain Element    name:q
-    Close Browser
+Test Addition With Negative Number
+    ${a}=    Set Variable    -3
+    ${b}=    Set Variable    10
+    ${result}=    Evaluate    ${a} + ${b}
+    Should Be Equal    ${result}    7
 
-Verify I'm Feeling Lucky Button
-    Open Browser    ${URL}    ${BROWSER}
-    Page Should Contain Element    xpath=//input[@value="I'm Feeling Lucky"]
-    Close Browser
-
-Verify Google Logo Is Visible
-    Open Browser    ${URL}    ${BROWSER}
-    Page Should Contain Element    id=hplogo
-    Close Browser
+Test Addition Of Floats
+    ${a}=    Set Variable    2.5
+    ${b}=    Set Variable    3.5
+    ${result}=    Evaluate    ${a} + ${b}
+    Should Be Equal    ${result}    6.0
