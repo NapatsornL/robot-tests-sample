@@ -23,4 +23,3 @@ Test Addition Of Floats
     ${b}=    Set Variable    3.5
     ${result}=    Evaluate    ${a} + ${b}
     Should Be Equal As Strings    ${result}    6.0
-uld Be Equal    ${result}    6.0
